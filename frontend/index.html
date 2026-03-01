@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Security Scanner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- INPUT SECTION -->
+  <div id="inputBox">
+    <h1>Web Security Scanner</h1> 
+    
+    <input 
+      type="url" 
+      id="url" 
+      placeholder="Enter target URL (Example: https://example.com)" 
+      required
+    >
+
+    <button onclick="scan()">SCAN</button>
+  </div>
+
+  <!-- REPORT SECTION -->
+  <div id="report" class="report hidden">
+    <h2>🔍 Scan Report</h2>
+    <div id="cards" class="cards"></div>
+
+    <button class="again" onclick="resetScan()">🔄 Run Another Scan</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
