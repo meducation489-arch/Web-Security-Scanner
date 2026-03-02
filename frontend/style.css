@@ -5,14 +5,29 @@
 
 body {
   margin: 0;
-  min-height: 80vh;
+  min-height: 100vh;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(135deg, #020617, #0f172a);
-  color: #e5e7eb;
+  background: linear-gradient(
+    -45deg,
+    #18181a,
+    #111113,
+    #bf3e43,
+    #18181a
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  color: #bec2c1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 /* ===== Container ===== */
 .container {
@@ -98,17 +113,17 @@ button:hover {
 /* ===== Cards Grid ===== */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
 }
 
 /* ===== Individual Card ===== */
 .card {
   background: #0f172a;
-  border-left: 8px solid #22c55e;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 12px rgba(86, 86, 86, 0.4);
+  border-left: 4px solid #22c55e;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 0 18px rgba(86, 86, 86, 0.4);
   transition: transform 0.2s ease;
 }
 
